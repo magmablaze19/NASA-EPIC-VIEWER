@@ -3,7 +3,7 @@
  * Created:   07.01.2025
  **/
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css';
 
@@ -39,6 +39,12 @@ function App() {
     }
     setLoading(false);
   };
+
+  //Load Image on webpage start
+  useEffect(() => {
+    fetchImages();
+  }, [])
+  
   //Website structure
   return (
    <div className="app-container">
