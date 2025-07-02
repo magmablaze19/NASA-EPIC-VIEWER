@@ -74,6 +74,7 @@ This is required for the software to run properly. You can try using the API key
 
 - Image preloading seems to be substantially slower on Windows. Linux, android, and IOS platforms seem to load normally. Wait until first image has fully rendered before attempting to use the slider bar.
 - The API returns no data on some days, I checked with the official viewer and that appears to be due to missing data for that day.
+- If the deployed demo hasnt been accessed by someone in a while, the render backend host will go dormant until it recives a request. This causes some delay if you are the first user accessing the site after a period of backend downtime.
 
 ## Contact
 
