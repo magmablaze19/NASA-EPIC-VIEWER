@@ -46,12 +46,13 @@ function App() {
         <h1 className="header">NASA EPIC Photo Viewer</h1>
         <div className="controls">
           <label htmlFor="date-input">Select a Date:</label>
-          <input id="date-input" type="date" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)} max={new Date().toISOString().split('T')[0]}/>
+          <input id="date-input" type="date" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)} min="2015-06-06" max={new Date().toISOString().split('T')[0]}/>
           <button onClick={fetchImages}>Get Images</button>
         </div>
         <div className="image-container"> 
           {loading && <p>Loading...</p>}
           {imageUrls.length !== 0 && (<img src={imageUrls[index]} alt="Earth from NASA" loading="eager" className="image"/>)}
+          {imageUrls.length == 0 && <p>No Photos for Selected Date!</p>}
         </div>
         <div className="controls">
           {imageUrls.length > 1 && (<input type="range" min="0" max={imageUrls.length - 1} value={index} onChange={(e) => setIndex(Number(e.target.value))} className="slider"/>)}
