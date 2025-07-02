@@ -6,7 +6,7 @@ I built it using a react front end and a nodejs + express backend. The backend a
 ## Live Demo
 The site is deployed on vercel for the front end, and render for the backend. You can view a live demo with the link below or in the sidebar.
 
-[https://nasa-demo.vercel.app](https://nasa-epic-viewer.vercel.app/)
+[https://nasa-epic-viewer.vercel.app](https://nasa-epic-viewer.vercel.app/)
 
 ## Features
 
