@@ -1,3 +1,8 @@
+/**
+ * Author:    Alexandre Passin
+ * Created:   07.01.2025
+ **/
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import './style.css';
