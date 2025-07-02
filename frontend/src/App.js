@@ -58,7 +58,7 @@ function App() {
         <div className="image-container"> 
           {loading && <p>Loading...</p>}
           {imageUrls.length !== 0 && (<img src={imageUrls[index]} alt="Earth from NASA" loading="eager" className="image"/>)}
-          {imageUrls.length == 0 && <p>No Photos for Selected Date!</p>}
+          {imageUrls.length == 0 && !loading && <p>No Photos for Selected Date!</p>}
         </div>
         <div className="controls">
           {imageUrls.length > 1 && (<input type="range" min="0" max={imageUrls.length - 1} value={index} onChange={(e) => setIndex(Number(e.target.value))} className="slider"/>)}
