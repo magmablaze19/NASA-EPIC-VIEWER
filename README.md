@@ -20,7 +20,7 @@ If you would like to run the site locally, follow the steps below:
 ### 1. Clone the Repository
 
 ```
-https://github.com/magmablaze19/NASA-EPIC-VIEWER.git
+git clone https://github.com/magmablaze19/NASA-EPIC-VIEWER.git
 cd NASAdemo
 ```
 
