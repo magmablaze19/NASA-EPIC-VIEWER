@@ -25,12 +25,16 @@ function App() {
       //Preload all images in array to allow for smooth cycling. 
       //Necessary as images are quite large.
       //Doesnt seem to work well on windows.
-      await data.imageLinkArray.forEach(element => {
-        const img = new Image();
-        img.src = element;
-        //Not sure if this helps, read on stack overflow it should
-        window[element] = img;
+      var prom = new Promise((resolve, reject) => {
+        await data.imageLinkArray.forEach(element => {
+          const img = new Image();
+          img.src = element;
+          //Not sure if this helps, read on stack overflow it should
+          window[element] = img;
+          resolve();
+        });
       });
+      prom.then();
     } catch (err) {
       //Set image array to single exploding earth gif for the lols if erroring out
       setImageUrls(["https://i.makeagif.com/media/3-20-2016/B1R3n8.gif"]);
