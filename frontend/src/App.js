@@ -26,7 +26,7 @@ function App() {
       //Necessary as images are quite large.
       //Doesnt seem to work well on windows.
       var prom = new Promise((resolve, reject) => {
-        await data.imageLinkArray.forEach(element => {
+        data.imageLinkArray.forEach(element => {
           const img = new Image();
           img.src = element;
           //Not sure if this helps, read on stack overflow it should
