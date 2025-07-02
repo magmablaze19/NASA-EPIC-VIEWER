@@ -1,3 +1,8 @@
+/**
+ * Author:    Alexandre Passin
+ * Created:   07.01.2025
+ **/
+
 import express from "express";
 import fetch from "node-fetch";
 import cors from "cors";
